@@ -12,6 +12,12 @@
                Source="logo.png" />
         <Entry Grid.Row="1" Placeholder="Search for book..." />
         <Button Grid.Row="1" Grid.Column="1" Text="Search" />
-        <!--Books go here-->
+        <CollectionView ItemsSource="{Binding Books}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Title}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
 </ContentPage>
