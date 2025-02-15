@@ -1,11 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Booked"
              x:Class="Booked.MainPage">
     <Grid RowDefinitions="200, Auto, *"
-          ColumnDefinitions=".75*, .25*">
+          ColumnDefinitions=".75*, .25*"
+          ColumnSpacing="24"
+          RowSpacing="24"
+          Padding="24">
         <Image Grid.ColumnSpan="2" 
                Source="logo.png" />
-        <Label Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center" FontSize="48" Text="Hello, Booked!" />
+        <Entry Grid.Row="1" Placeholder="Search for book..." />
+        <Button Grid.Row="1" Grid.Column="1" Text="Search" />
+        <!--Books go here-->
     </Grid>
 </ContentPage>
